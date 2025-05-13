@@ -31,22 +31,6 @@ export default function SymptomSelector({ symptoms, selectedSymptoms, onToggle }
           </div>
           <div className="ml-3 text-sm">
             <label className="font-medium text-gray-700">{symptom.descripcion}</label>
-            <div className="flex items-center mt-1 space-x-2">
-              <span
-                className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${
-                  symptom.frecuencia === "Alta"
-                    ? "bg-red-100 text-red-800"
-                    : symptom.frecuencia === "Media"
-                      ? "bg-yellow-100 text-yellow-800"
-                      : "bg-blue-100 text-blue-800"
-                }`}
-              >
-                Frecuencia: {symptom.frecuencia}
-              </span>
-              <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 text-gray-800">
-                Confiabilidad: {(symptom.confiabilidad_estimada * 100).toFixed(0)}%
-              </span>
-            </div>
           </div>
         </div>
       ))}
